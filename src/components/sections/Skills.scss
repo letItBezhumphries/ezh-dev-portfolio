@@ -1,0 +1,62 @@
+
+.skills-section {
+  // background-color:lightblue;
+  grid-row: 2 / span 2;
+}
+
+.intro {
+
+}
+
+.skillset {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #778492;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__level-bar {
+    height: 15px;
+    background: #e8e8e8;
+  }
+
+  &__level-bar-inner {
+    width: 96%;
+    height: 15px;
+    background: #66cb8c;
+  }
+}
+
+.level-label {
+  color: #ccd1d6;
+}
+
+.more-skills-link {
+  text-decoration: none;
+  color:#3AAA64;
+}
+
+
+.more-link-icon {
+  margin-right: 10px;
+  // color: #778492;
+  color: #3AAA64;
+  
+  a {
+    color: #778492;
+  }
+}
