@@ -11,11 +11,7 @@ const ImageModal = ({ showModal, imgSrc, hideModal }) => {
     >
       <Modal.Header className='image-modal__header' closeButton></Modal.Header>
       <Modal.Body className='image-modal__body'>
-        <img
-          src={imgSrc}
-          className='image-modal__image'
-          alt='image of page'
-        ></img>
+        <img src={imgSrc} className='image-modal__image' alt=''></img>
       </Modal.Body>
     </Modal>
   );
