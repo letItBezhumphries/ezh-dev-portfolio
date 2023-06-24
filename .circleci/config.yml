@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: 
           name: Show current branch 
-          command: echo ${CURRENT_BRANCH}
+          command: echo ${CIRCLE_BRANCH}
       - restore_cache:
           keys: 
             - app-{{ checksum "package.json" }}
@@ -29,7 +29,7 @@ jobs:
       - checkout
       - run:
           name: Show current branch 
-          command: echo ${CURRENT_BRANCH}
+          command: echo ${CIRCLE_BRANCH}
       - run:
           name: Installing aws-cli 
           working_directory: /
@@ -48,7 +48,7 @@ jobs:
       - run:
           name: Deploy to AWS S3 
           command: |
-            if [ "${CURRENT_BRANCH}" == "master" ]
+            if [ "${CIRCLE_BRANCH}" == "master" ]
             then
               aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET} --delete
             fi
@@ -61,7 +61,7 @@ jobs:
       - checkout
       - run:
           name: Show current branch 
-          command: echo ${CURRENT_BRANCH}
+          command: echo ${CIRCLE_BRANCH}
       - run:
           name: Installing aws-cli 
           working_directory: /
