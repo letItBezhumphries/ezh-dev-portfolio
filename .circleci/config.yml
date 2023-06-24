@@ -50,7 +50,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]
             then
-              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET} --delete
+              aws --region ${AWS_REGION} s3 sync ~/repo/ s3://${AWS_BUCKET} --delete
             fi
 
   deploy-to-aws-cloudfront:
