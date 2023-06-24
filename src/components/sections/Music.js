@@ -15,7 +15,7 @@ const Music = () => {
                 size='lg'
                 className='music-icon'
               />
-              <a href='#'>Yeah Yeah Yeahs - Lovebomb</a>
+              <a href='/'>Yeah Yeah Yeahs - Lovebomb</a>
             </li>
             <li className='music-listitem'>
               <FontAwesomeIcon
@@ -23,7 +23,7 @@ const Music = () => {
                 size='lg'
                 className='music-icon'
               />
-              <a href='#'>TokiMonsta - Darkest (Dim)</a>
+              <a href='/'>TokiMonsta - Darkest (Dim)</a>
             </li>
             <li className='music-listitem'>
               <FontAwesomeIcon
@@ -31,7 +31,7 @@ const Music = () => {
                 size='lg'
                 className='music-icon'
               />
-              <a href='#'>Frank Zappa - Watermelon In Easter Hay</a>
+              <a href='/'>Frank Zappa - Watermelon In Easter Hay</a>
             </li>
             <li className='music-listitem'>
               <FontAwesomeIcon
@@ -39,7 +39,7 @@ const Music = () => {
                 size='lg'
                 className='music-icon'
               />
-              <a href='#'>Big Grams - Fell In the Sun</a>
+              <a href='/'>Big Grams - Fell In the Sun</a>
             </li>
           </ul>
         </div>

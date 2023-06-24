@@ -6,7 +6,6 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import StrokedHeading from './strokedHeading';
 import './header.scss';
 import Image from 'react-bootstrap/Image';
 import Headshot from '../assets/EricH-59473.jpg';

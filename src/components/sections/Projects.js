@@ -58,17 +58,17 @@ const Projects = () => {
               <img
                 className='project-view__photo project-view__photo--p1'
                 src={PhotoScrollerImage}
-                alt='brokentable site restaurant page image'
+                alt='brokentable site restaurant page'
               ></img>
               <img
                 className='project-view__photo project-view__photo--p2'
                 src={PhotogalleryImage}
-                alt='brokentable site restaurant photogallery and map'
+                alt='brokentable site restaurant photogallery component'
               ></img>
               <img
                 className='project-view__photo project-view__photo--p3'
                 src={BrokenTableMainImage}
-                alt='brokentable site restaurant photo scroller component'
+                alt='brokentable site restaurant photoscroller component'
               ></img>
             </div>
             <div className='project-featured__overview'>

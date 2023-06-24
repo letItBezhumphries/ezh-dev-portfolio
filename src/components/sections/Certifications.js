@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCertificate } from '@fortawesome/free-solid-svg-icons';
 import MicrosoftBadge from '../../assets/microsoft-365-certified-fundamentals.png';
 import './Certifications.scss';
 
@@ -11,7 +9,10 @@ const Certifications = () => {
         <div className='section-content'>
           <div className='certification'>
             <div className='certification__badge'>
-              <img src={MicrosoftBadge} />
+              <img
+                src={MicrosoftBadge}
+                alt='Microsoft 365 certification badge'
+              />
             </div>
             <h4 className='certification__title'>
               Microsoft 365 Certified: Fundamentals

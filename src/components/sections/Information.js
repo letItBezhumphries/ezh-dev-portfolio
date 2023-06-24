@@ -55,7 +55,7 @@ const Information = () => {
                 className='list-icon'
                 size='lg'
               ></FontAwesomeIcon>
-              <a href='https://www.ezhumphries.dev' />
+              {/* <a href='https://www.ezhumphries.dev' /> */}
               www.ezhumphries.dev
             </li>
           </ul>
