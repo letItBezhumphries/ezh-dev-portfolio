@@ -40,17 +40,17 @@ jobs:
       - run:
           name: Build Project
           command: |
-            npm install 
+            npm install
             npm run build
             cd build
             zip ../build.zip -r * .[^.]*
-            echo "Build Successful"
+            echo "build successful!"
       - run:
           name: Deploy to AWS S3 
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]
             then
-              aws --region ${AWS_REGION} s3 sync ~/repo/ s3://${AWS_BUCKET} --delete
+              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET} --delete
             fi
 
   deploy-to-aws-cloudfront:
@@ -72,11 +72,11 @@ jobs:
       - run:
           name: Build Project
           command: |
-            npm install 
+            npm install
             npm run build
             cd build
             zip ../build.zip -r * .[^.]*
-            echo "Build Successful"
+            echo "build successful!"
       - run:
           name: Deploy to AWS Cloudfront 
           command: |
