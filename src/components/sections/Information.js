@@ -8,11 +8,11 @@ import './Information.scss';
 
 const Information = () => {
   return (
-    <section className='basic-info-section'>
+    <section className='basic-info'>
       <div className='section-inner'>
         <h2 className='section-heading'>Basic Information</h2>
         <div className='section-content'>
-          <ul className='basic-info-section__list'>
+          <ul className='basic-info__list'>
             <li className='info-listitem'>
               <FontAwesomeIcon
                 icon={faLocationDot}
@@ -27,7 +27,9 @@ const Information = () => {
                 className='list-icon'
                 size='lg'
               ></FontAwesomeIcon>
-              ezhumphries@gmail.com
+              <a href='mailto:email@ezhumphries@gmail.com'>
+                <span>ezhumphries@gmail.com</span>
+              </a>
             </li>
             <li className='info-listitem'>
               <FontAwesomeIcon

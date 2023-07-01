@@ -1,6 +1,5 @@
 import './App.scss';
 import Header from './components/header';
-
 import AboutMe from './components/sections/AboutMe';
 import Projects from './components/sections/Projects';
 import Certifications from './components/sections/Certifications';
@@ -13,7 +12,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <div className='section-wrapper'>
+      <div className='content-wrapper'>
         <AboutMe />
         <Information />
         <Projects />

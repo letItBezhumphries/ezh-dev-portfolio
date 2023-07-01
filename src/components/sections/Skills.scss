@@ -1,6 +1,5 @@
 
 .skills-section {
-  // background-color:lightblue;
   grid-row: 2 / span 2;
 }
 
@@ -48,12 +47,16 @@
 .more-skills-link {
   text-decoration: none;
   color:#3AAA64;
+
+  &:hover {
+    text-decoration: underline;
+    color: #2d844e;
+  }
 }
 
 
 .more-link-icon {
   margin-right: 10px;
-  // color: #778492;
   color: #3AAA64;
   
   a {

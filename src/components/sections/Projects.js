@@ -31,19 +31,13 @@ const Projects = () => {
         <div className='section-content'>
           <div className='project-featured'>
             <h3 className='project-featured__title'>
-              <a
-                href='https://github.com/letItBezhumphries/micro-brokentable'
-                className='project-featured__title--link'
-              >
+              <a href='https://github.com/letItBezhumphries/micro-brokentable'>
                 Fullstack Photos & Menus Service - Similar to OpenTable
               </a>
             </h3>
             <p className='project-featured__summary'>
               The{' '}
-              <a
-                href='https://github.com/letItBezhumphries/micro-brokentable'
-                className='project-featured__summary--link'
-              >
+              <a href='https://github.com/letItBezhumphries/micro-brokentable'>
                 Brokentable Photogallery & Menu Service
               </a>
               , was built in an Agile environment with myself being in charge of
@@ -54,6 +48,7 @@ const Projects = () => {
               incorporating each team members application code in a Service
               Oriented Architecture.
             </p>
+
             <div className='project-view'>
               <img
                 className='project-view__photo project-view__photo--p1'
@@ -71,6 +66,7 @@ const Projects = () => {
                 alt='brokentable site restaurant photoscroller component'
               ></img>
             </div>
+
             <div className='project-featured__overview'>
               <h3 className='project-featured__overview--title'>
                 Brokentable Photogallery Service
@@ -159,13 +155,13 @@ const Projects = () => {
               </ul>
               <p>
                 <a
-                  className='project-row__overview--more-link'
+                  className='project-row__more-link'
                   href='https://github.com/letItBezhumphries/mern-proshop.git'
                 >
                   <FontAwesomeIcon
                     icon={faUpRightFromSquare}
                     size='lg'
-                    className='project-row__overview--link-icon'
+                    className='project-row__link-icon'
                   ></FontAwesomeIcon>
                   Find out more
                 </a>
@@ -224,13 +220,13 @@ const Projects = () => {
               </ul>
               <p>
                 <a
-                  className='project-row__overview--more-link'
+                  className='project-row__more-link'
                   href='https://github.com/letItBezhumphries/cinema-react-app'
                 >
                   <FontAwesomeIcon
                     icon={faUpRightFromSquare}
                     size='lg'
-                    className='project-row__overview--link-icon'
+                    className='project-row__link-icon'
                   ></FontAwesomeIcon>
                   Find out more
                 </a>
@@ -282,13 +278,13 @@ const Projects = () => {
               </ul>
               <p>
                 <a
-                  className='project-row__overview--more-link'
+                  className='project-row__more-link'
                   href='https://github.com/letItBezhumphries/reclarker-gallery'
                 >
                   <FontAwesomeIcon
                     icon={faUpRightFromSquare}
                     size='lg'
-                    className='project-row__overview--link-icon'
+                    className='project-row__link-icon'
                   ></FontAwesomeIcon>
                   Find out more
                 </a>

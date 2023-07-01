@@ -80,6 +80,7 @@ jobs:
       - run:
           name: Deploy to AWS Cloudfront 
           command: |
+            echo "The cloudfront distribution id: ${CLOUDFRONT_DISTRIBUTION_ID}"
             aws configure set preview.cloudfront true
             if [ "${CIRCLE_BRANCH}" == "master" ]
             then

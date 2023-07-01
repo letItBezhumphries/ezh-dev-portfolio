@@ -1,11 +1,9 @@
 .App {
-  // background-color: darkslategray;
   margin: 0 0;
   padding: 0 0;
 }
 
-.section-wrapper {
-  // background-color: chocolate;
+.content-wrapper {
   background-color: #DAE3E7;
   width: 100%;
   margin-top: 30px;
@@ -14,6 +12,8 @@
   grid-template-rows: repeat(8, 350px);
   grid-template-columns: 68% 30%;
 }
+
+
 
 .section-inner {
   margin: 0 0;

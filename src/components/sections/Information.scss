@@ -1,33 +1,36 @@
 
-.basic-info-section {
-  background-color: lime;
+.basic-info {
 
   &__list {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     padding: 0 0;
-    // margin: 0 0;
+
 
     li {
       margin-bottom: 12px;
+
+
+      &:first-child {
+        color: #434343;
+        font-size: 16px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #3AAA64;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #2d844e;
+      }
     }
+
+    
   }
 }
-
-.info-listitem {
-  &:first-of-type {
-    color: #434343;
-    font-size: 16px;
-  }
-}
-
-.info-listitem, 
-.info-listitem a {
-  text-decoration: none;
-  color:#3AAA64;
-}
-
 
 .list-icon {
   margin-right: 20px;
