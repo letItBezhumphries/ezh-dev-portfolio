@@ -144,7 +144,7 @@ jobs:
           name: Terraform Plan
           command: |
             cd artifacts/infrastructure/
-            terraform init 
+            terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
             terraform plan
       - run:
@@ -240,16 +240,9 @@ workflows:
             branches:
               only:
                 - master
-      # - unit-test:
-      #     requires:
-      #       - linting
-      #       - prettier
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
       - terraform-validate:
           requires:
+            - linting
             - prettier
           filters:
             branches:
@@ -264,7 +257,7 @@ workflows:
                 - master
       - deploy-to-aws-s3:
           requires:
-            - publish-to-docker-hub
+            - terraform-plan-and-apply
           filters:
             branches:
               only:
