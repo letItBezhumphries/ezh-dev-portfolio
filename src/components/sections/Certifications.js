@@ -3,20 +3,17 @@ import './Certifications.scss';
 
 const Certifications = () => {
   return (
-    <section className='certification-section'>
-      <div className='section-inner'>
-        <h2 className='section-heading'>Certifications</h2>
-        <div className='section-content'>
-          <div className='certification'>
-            <div className='certification__badge'>
-              <img
-                src={MicrosoftBadge}
-                alt='Microsoft 365 certification badge'
-              />
+    <section className="certification-section">
+      <div className="section-inner">
+        <h2 className="section-heading">Certifications</h2>
+        <div className="section-content">
+          <div className="certification">
+            <div className="certification__badge">
+              <img src={MicrosoftBadge} alt="Microsoft 365 certification badge" />
             </div>
-            <h4 className='certification__title'>
+            <h4 className="certification__title">
               Microsoft 365 Certified: Fundamentals
-              <span className='certification__year'>2022</span>
+              <span className="certification__year">2022</span>
             </h4>
           </div>
         </div>

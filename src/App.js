@@ -10,9 +10,9 @@ import Skills from './components/sections/Skills';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
-      <div className='content-wrapper'>
+      <div className="content-wrapper">
         <AboutMe />
         <Information />
         <Projects />
