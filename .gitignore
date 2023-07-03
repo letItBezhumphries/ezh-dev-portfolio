@@ -60,7 +60,7 @@ infrastructure/*_override.tf.json
 # example: *tfplan*
 
 # Ignore CLI configuration files
-.terraformrc
-terraform.rc
+infrastructure/.terraformrc
+infrastructure/terraform.rc
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform

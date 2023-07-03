@@ -3,7 +3,7 @@
 #####################
 
 resource "aws_s3_bucket" "ezhdevportfolio_s3_bucket" {
-  bucket = "${local.prefix}-01"
+  bucket        = "${local.prefix}-01"
   force_destroy = true
 
   tags = local.common_tags
@@ -11,17 +11,17 @@ resource "aws_s3_bucket" "ezhdevportfolio_s3_bucket" {
 
 resource "aws_s3_bucket_acl" "ezhdevportfolio_bucket_acl" {
   bucket = aws_s3_bucket.ezhdevportfolio_s3_bucket.id
-  acl = "private"
+  acl    = "private"
 }
 
 resource "aws_s3_bucket_public_access_block" "public_block" {
   bucket = aws_s3_bucket.ezhdevportfolio_s3_bucket.id
 
-  block_public_acls = true
-  block_public_policy = true
+  block_public_acls       = true
+  block_public_policy     = true
   restrict_public_buckets = true
-  ignore_public_acls = true
-  
+  ignore_public_acls      = true
+
 }
 
 resource "aws_s3_bucket_versioning" "ezhdevportfolio_s3_bucket_versioning" {
@@ -58,10 +58,10 @@ data "aws_iam_policy_document" "ezhdevportfolio_bucket_policy_document" {
     ]
 
     principals {
-      type = "AWS"
+      type        = "AWS"
       identifiers = [aws_cloudfront_origin_access_identity.ezhdevportfolio_origin_access.iam_arn]
     }
   }
 
-  
+
 }
