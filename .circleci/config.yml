@@ -11,7 +11,7 @@ executors:
   #     - image: circleci/buildpack-deps:stretch
   terraform-executor:
     docker:
-      - image: hashicorp/terraform:0.14.3
+      - image: hashicorp/terraform:latest
 
 aliases:
   - &show-current-branch-name
