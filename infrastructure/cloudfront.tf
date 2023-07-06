@@ -1,8 +1,8 @@
 #####################
-# Cloudfront Resources 
+# Cloudfront Resources
 #####################
 
-resource "aws_cloudfront_origin_access_identity" "ezhdevportfolio_origin_access" {
+resource "aws_cloudfront_origin_access_identity" "s3_oai" {
   comment = "OAI for ezhdevportfolio s3 bucket"
 }
 
@@ -17,7 +17,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     domain_name = aws_s3_bucket.ezhdevportfolio_s3_bucket.bucket_regional_domain_name
     origin_id   = aws_s3_bucket.ezhdevportfolio_s3_bucket.id
     s3_origin_config {
-      origin_access_identity = aws_cloudfront_origin_access_identity.ezhdevportfolio_origin_access.cloudfront_access_identity_path
+      origin_access_identity = aws_cloudfront_origin_access_identity.s3_oai.cloudfront_access_identity_path
     }
   }
 

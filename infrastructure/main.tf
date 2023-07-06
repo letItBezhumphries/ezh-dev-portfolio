@@ -1,12 +1,12 @@
 provider "aws" {
-  region = "us-west-2"
-  # profile = "letitbeez"
+  region  = "us-west-2"
+  profile = "letitbeez"
 }
 
 terraform {
   backend "s3" {
-    bucket  = "ezhdevportfolio-tf-state"
-    key     = "ezhdevportfolio.tfstate"
+    bucket  = "ezhumphries-dev-portfolio-tf-state"
+    key     = "ezhumphries-dev-portfolio.tfstate"
     region  = "us-west-2"
     encrypt = true
   }

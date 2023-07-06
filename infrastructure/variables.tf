@@ -1,9 +1,9 @@
 variable "prefix" {
-  default = "ezh-dev-portfolio"
+  default = "ezhumphries-dev-portfolio"
 }
 
 variable "project" {
-  default = "ezhdevportfolio"
+  default = "react-portfolio"
 }
 
 variable "custom_error_response" {
