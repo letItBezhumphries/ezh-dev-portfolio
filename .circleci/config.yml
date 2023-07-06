@@ -153,7 +153,7 @@ jobs:
             cd artifacts/infrastructure/
             terraform workspace select ${CIRCLE_BRANCH}
             terraform apply --auto-approve
-            terraform output cinema_app_bucket_name > ../ezhdevportfolio_bucket_name.txt
+            terraform output ezhdevportfolio_bucket_name > ../ezhdevportfolio_bucket_name.txt
             terraform output cloudfront_distribution_id > ../cloudfront_distribution_id.txt
       - persist_to_workspace:
           root: ./
