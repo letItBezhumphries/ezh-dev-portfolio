@@ -26,7 +26,6 @@ resource "aws_s3_bucket_public_access_block" "public_block" {
 
 }
 
-
 resource "aws_s3_bucket_acl" "ezhdevportfolio_bucket_acl" {
   depends_on = [
     aws_s3_bucket_public_access_block.public_block,
@@ -60,7 +59,6 @@ resource "aws_s3_bucket_website_configuration" "ezhdevportfolio_website_config" 
     key = "index.html"
   }
 }
-
 
 data "aws_iam_policy_document" "ezhdevportfolio_bucket_policy_document" {
   statement {
