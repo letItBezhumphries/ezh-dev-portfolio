@@ -13,7 +13,7 @@ terraform {
   backend "s3" {
     bucket  = "ezhumphries-dev-portfolio-tf-state"
     key     = "ezhumphries-dev-portfolio.tfstate"
-    region  = var.aws_region
+    region  = "us-east-1"
     encrypt = true
   }
 }
