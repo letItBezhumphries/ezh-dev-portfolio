@@ -17,10 +17,7 @@ const Level = styled.span`
 `;
 
 const SkillInfoTooltip = ({ id, children, text, location }) => (
-  <OverlayTrigger
-    overlay={<StyledTooltip id={id}>{text}</StyledTooltip>}
-    placement={location ? location : 'right'}
-  >
+  <OverlayTrigger overlay={<StyledTooltip id={id}>{text}</StyledTooltip>} placement={location ? location : 'right'}>
     <Level>{children}</Level>
   </OverlayTrigger>
 );

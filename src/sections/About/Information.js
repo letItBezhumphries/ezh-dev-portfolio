@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLocationDot,
-  faEnvelope,
-  faLink,
-} from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const ListWrapper = styled.div`
@@ -51,54 +47,30 @@ const Information = (props) => {
   return (
     <ListWrapper>
       <InfoList>
-        <li className='info-listitem'>
-          <FontAwesomeIcon
-            icon={faLocationDot}
-            className='list-icon'
-            size='lg'
-          ></FontAwesomeIcon>
+        <li className="info-listitem">
+          <FontAwesomeIcon icon={faLocationDot} className="list-icon" size="lg"></FontAwesomeIcon>
           Los Angeles, California
         </li>
-        <li className='info-listitem'>
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            className='list-icon'
-            size='lg'
-          ></FontAwesomeIcon>
+        <li className="info-listitem">
+          <FontAwesomeIcon icon={faEnvelope} className="list-icon" size="lg"></FontAwesomeIcon>
           {/* <a href='mailto:email@ezhumphries@gmail.com'>
             <span>ezhumphries@gmail.com</span>
           </a> */}
-          <a href='/#contact'>
+          <a href="/#contact">
             <span>ezhumphries@gmail.com</span>
           </a>
         </li>
-        <li className='info-listitem'>
-          <FontAwesomeIcon
-            icon={faLink}
-            className='list-icon'
-            size='lg'
-          ></FontAwesomeIcon>
-          <a href='https://linkedin.com/in/eric-humphries-80'>
-            linkedin.com/in/eric-humphries
-          </a>
+        <li className="info-listitem">
+          <FontAwesomeIcon icon={faLink} className="list-icon" size="lg"></FontAwesomeIcon>
+          <a href="https://linkedin.com/in/eric-humphries-80">linkedin.com/in/eric-humphries</a>
         </li>
-        <li className='info-listitem'>
-          <FontAwesomeIcon
-            icon={faLink}
-            className='list-icon'
-            size='lg'
-          ></FontAwesomeIcon>
-          <a href='https://github.com/letItBezhumphries'>
-            github.com/letItBezhumphries
-          </a>
+        <li className="info-listitem">
+          <FontAwesomeIcon icon={faLink} className="list-icon" size="lg"></FontAwesomeIcon>
+          <a href="https://github.com/letItBezhumphries">github.com/letItBezhumphries</a>
         </li>
-        <li className='info-listitem'>
-          <FontAwesomeIcon
-            icon={faLink}
-            className='list-icon'
-            size='lg'
-          ></FontAwesomeIcon>
-          <a href='https://www.ezhumphries.dev'>ezhumphries.dev</a>
+        <li className="info-listitem">
+          <FontAwesomeIcon icon={faLink} className="list-icon" size="lg"></FontAwesomeIcon>
+          <a href="https://www.ezhumphries.dev">ezhumphries.dev</a>
         </li>
       </InfoList>
     </ListWrapper>

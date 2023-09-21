@@ -8,11 +8,7 @@ const ContainerRow = ({ children, columns }) => {
     );
   });
 
-  return (
-    <div className='container-row'>
-      {columns > 1 ? items : <div className='inner-container'>{children}</div>}
-    </div>
-  );
+  return <div className="container-row">{columns > 1 ? items : <div className="inner-container">{children}</div>}</div>;
 };
 
 export default ContainerRow;

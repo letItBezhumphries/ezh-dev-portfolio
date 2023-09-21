@@ -46,16 +46,7 @@ const SkillGroup = ({ skillgroup, children, tooltipLoc }) => {
         <span>{skillgroup.type} </span>
       </Heading>
       {skillgroup.skills.map((skill, i) => (
-        <Skill
-          key={i}
-          skill={skill.skill}
-          tooltipText={skill.tooltip}
-          id={skill.id}
-          level={skill.level}
-          percentage={skill.percentage}
-          location={tooltipLoc}
-          animate={animateSkills}
-        >
+        <Skill key={i} skill={skill.skill} tooltipText={skill.tooltip} id={skill.id} level={skill.level} percentage={skill.percentage} location={tooltipLoc} animate={animateSkills}>
           {children[i]}
         </Skill>
       ))}

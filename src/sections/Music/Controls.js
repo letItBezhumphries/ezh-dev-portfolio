@@ -1,25 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 // icons
-import {
-  IoPlayBackSharp,
-  IoPlayForwardSharp,
-  IoPlaySkipBackSharp,
-  IoPlaySkipForwardSharp,
-  IoPlaySharp,
-  IoPauseSharp,
-} from 'react-icons/io5';
+import { IoPlayBackSharp, IoPlayForwardSharp, IoPlaySkipBackSharp, IoPlaySkipForwardSharp, IoPlaySharp, IoPauseSharp } from 'react-icons/io5';
 
-const Controls = ({
-  audioRef,
-  progressBarRef,
-  duration,
-  setTimeProgress,
-  tracks,
-  trackIndex,
-  setCurrentTrack,
-  setTrackIndex,
-  handleNext,
-}) => {
+const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setCurrentTrack, setTrackIndex, handleNext }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const playAnimationRef = useRef();
@@ -52,10 +35,7 @@ const Controls = ({
     setTimeProgress(currentTime);
     progressBarRef.current.value = currentTime;
     // updating the css variable declared in css file and dynamically updating it
-    progressBarRef.current.style.setProperty(
-      '--range-progress',
-      `${(progressBarRef.current.value / duration) * 100}%`
-    );
+    progressBarRef.current.style.setProperty('--range-progress', `${(progressBarRef.current.value / duration) * 100}%`);
 
     playAnimationRef.current = requestAnimationFrame(repeat);
   }, [audioRef, progressBarRef, duration, setTimeProgress]);
@@ -71,7 +51,7 @@ const Controls = ({
 
   return (
     <div>
-      <div className='controls'>
+      <div className="controls">
         <button onClick={handlePrevious}>
           <IoPlaySkipBackSharp />
         </button>
@@ -79,9 +59,7 @@ const Controls = ({
           <IoPlayBackSharp />
         </button>
 
-        <button onClick={togglePlayPause}>
-          {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
-        </button>
+        <button onClick={togglePlayPause}>{isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}</button>
         <button onClick={skipForward}>
           <IoPlayForwardSharp />
         </button>

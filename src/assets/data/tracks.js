@@ -15,24 +15,24 @@ export const tracks = [
     title: 'Doomsday',
     src: doomsday,
     author: 'MF DOOM',
-    thumbnail: mfdoom,
+    thumbnail: mfdoom
   },
   {
     title: 'Watermelon In Easter Hay',
     src: watermelon,
     author: 'Frank Zappa',
-    thumbnail: fz,
+    thumbnail: fz
   },
   {
     title: 'Fell into the Sun',
     src: intoTheSun,
     author: 'Big Grams',
-    thumbnail: biggrams,
+    thumbnail: biggrams
   },
   {
     title: 'Darkest Dim',
     src: darkestDim,
     author: 'Tokimonsta',
-    thumbnail: tokimonsta,
-  },
+    thumbnail: tokimonsta
+  }
 ];

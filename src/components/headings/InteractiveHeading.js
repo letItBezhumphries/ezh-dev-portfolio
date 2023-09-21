@@ -6,7 +6,7 @@ const InteractiveHeading = ({ heading, link, githublink, size }) => {
       return <span key={i}>&nbsp;</span>;
     } else if (letter === '&') {
       return (
-        <span key={i} className='space'>
+        <span key={i} className="space">
           {letter}
         </span>
       );
@@ -16,17 +16,7 @@ const InteractiveHeading = ({ heading, link, githublink, size }) => {
   });
 
   return (
-    <h1
-      className={
-        size === 'lrg'
-          ? 'interactiveHeading-lrg'
-          : size === 'md'
-          ? 'interactiveHeading-md'
-          : size === 'sm'
-          ? 'interactiveHeading-sm'
-          : 'interactiveHeading'
-      }
-    >
+    <h1 className={size === 'lrg' ? 'interactiveHeading-lrg' : size === 'md' ? 'interactiveHeading-md' : size === 'sm' ? 'interactiveHeading-sm' : 'interactiveHeading'}>
       {link ? <a href={githublink}>{headingText}</a> : <div>{headingText}</div>}
     </h1>
   );

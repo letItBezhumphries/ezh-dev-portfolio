@@ -45,17 +45,11 @@ const Divider = ({ color, size, centered, full }) => {
     return <FullDivider style={{ backgroundColor: color }}></FullDivider>;
   } else {
     if (size === 'sm') {
-      divider = (
-        <SmallDivider style={{ backgroundColor: color }}></SmallDivider>
-      );
+      divider = <SmallDivider style={{ backgroundColor: color }}></SmallDivider>;
     } else if (size === 'md') {
-      divider = (
-        <MediumDivider style={{ backgroundColor: color }}></MediumDivider>
-      );
+      divider = <MediumDivider style={{ backgroundColor: color }}></MediumDivider>;
     } else {
-      divider = (
-        <StyledDivider style={{ backgroundColor: color }}></StyledDivider>
-      );
+      divider = <StyledDivider style={{ backgroundColor: color }}></StyledDivider>;
     }
   }
 

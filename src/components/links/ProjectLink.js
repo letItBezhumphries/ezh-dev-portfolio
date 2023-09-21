@@ -14,13 +14,8 @@ const ProjectLink = ({ githublink, text, section, linkClass, url }) => {
     );
   } else {
     link = (
-      <div
-        className={url !== undefined ? 'link-container site' : 'link-container'}
-      >
-        <a
-          href={section !== undefined ? section : githublink}
-          className={`link ${linkClass}`}
-        >
+      <div className={url !== undefined ? 'link-container site' : 'link-container'}>
+        <a href={section !== undefined ? section : githublink} className={`link ${linkClass}`}>
           {text}
           <FontAwesomeIcon icon={faChevronRight} />
         </a>
