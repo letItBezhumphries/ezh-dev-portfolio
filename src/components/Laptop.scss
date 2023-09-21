@@ -1,0 +1,81 @@
+@import '../assets/sass/abstracts/mixins';
+
+.laptop-bg {
+  background-image: url('../assets/img/macbook-47638.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  // @include respond(tab-land) {
+  //   width: 62%;
+  //   height: 62%;
+  // }
+
+  // @include respond(tab-port) {
+  //   width: 55%;
+  //   height: 55%;
+  // }
+
+  // @include respond(phone) {
+  //   width: 60%;
+  //   height: 60%;
+  // }
+}
+
+.image-bg {
+  display: block;
+  background-color: aqua;
+  height: 71%;
+  width: 60.5%;
+  // height: ;
+  // height: 82%;
+  // width: 70%;
+  z-index: 10000;
+  top: 49%;
+  left: 49%;
+  // top: 50%;
+  // left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: 991.98px) {
+    width: 68%;
+    height: 72%;
+  };
+
+  @include respond(tab-port) {
+    width: 67%;
+    height: 71%;
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    width: 70%;
+    height: 68%;
+  };
+
+  @include respond(phone) {
+    width: 70%;
+    height: 68%;
+  }
+
+  @media only screen and (max-width: 575.98px) {
+    width: 70%;
+    height: 64%;
+  };
+}
+
+.app-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

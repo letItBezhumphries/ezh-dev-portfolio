@@ -1,0 +1,77 @@
+
+.buttonGroup-row {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+
+  top: 55%;
+  left: 38%;
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:not(:first-child) {
+      margin: 0 0 0 10px;
+    }
+
+  }
+
+  &__iconBox {
+    // background: inherit;
+    background: #262f38;
+    cursor: pointer;
+    font-size: 24px;
+    height: 55px;
+    width: 55px;
+    margin: 0 15px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background .8s, color .8s, box-shadow .8s, transform .8s;
+
+    &:hover {
+      background: #9c27b0;
+      box-shadow: 0 0 0 3px rgba(4, 94, 201, 0.1);
+      transform: scale(0.9);
+    }
+
+    &:hover .buttonGroup-row__icon {
+      color: #fff;
+      -webkit-animation: toBottomFromTop 0.3s forwards;
+      -moz-animation: toBottomFromTop 0.3s forwards;
+      animation: toBottomFromTop 0.3s forwards;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    transform: translate(0, 0);
+  }
+
+}
+
+
+
+
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(-100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+}

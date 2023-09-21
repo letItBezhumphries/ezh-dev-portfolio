@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './assets/styles/styles.scss';
-import App from './App';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { createRoot } from 'react-dom/client';
+import App from './App.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/sass/main.scss';
+
+const el = document.getElementById('root');
+const root = createRoot(el);
+
+root.render(<App />);

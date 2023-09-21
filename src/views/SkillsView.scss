@@ -1,0 +1,32 @@
+$primary-dark: #15158c;
+$primary-dark-light: rgba(45, 45, 152, 0.8);
+$primary-dark-darker: rgba(4, 4, 107, 0.5);
+
+$primary-light: rgba(119, 92, 224, 0.8);
+
+$primary-shallow:rgba(172, 155, 241, 0.856);
+$primary-deep: rgba(26, 4, 86, 0.548);
+
+$primary-contrary: rgba(239, 13, 13, 0.893);
+
+
+
+.skillsView {
+  padding: 10rem 0;
+  background: rgb(0, 33, 52);
+}
+
+
+.skew {
+  padding: 20rem 0;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+  /* select all the direct children to skew in opposite direction */
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.skills-wrapper {
+  padding: 5rem 12rem;
+}

@@ -1,0 +1,156 @@
+@import '../../assets/sass/abstracts/mixins';
+
+.interactiveHeading,
+.interactiveHeading-lrg
+ {
+  margin-top: 10px;
+  margin-bottom: 3rem;
+
+  font-size: 6rem;
+  line-height: 5.4rem;
+  cursor: default;
+
+  @include respond(phone) {
+    font-size: 4.2rem;
+    line-height: 4.6rem;
+  }
+
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    transition: all .2s ease-out;
+    color: #fff;
+
+    & .space {
+      padding: 0 15px;
+    }
+
+    &:hover {
+      color: #F4A949;
+      animation: rubberBounce;
+      animation-duration: 1s;
+    }
+  }
+}
+
+
+.interactiveHeading-md {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'brandon_textregular';
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  cursor: default;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+
+
+
+
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    transition: all .2s ease-out;
+    color: #fff;
+
+    & .space {
+      padding: 0 15px;
+    }
+
+    &:hover {
+      color: #F4A949;
+      animation: rubberBounce;
+      animation-duration: 1s;
+    }
+  }
+}
+
+
+.interactiveHeading-sm {
+  margin-top: 1rem;
+  margin-bottom: 1.6rem;
+
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  cursor: default;
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    transition: all .2s ease-out;
+    color: #fff;
+
+    & .space {
+      padding: 0 15px;
+    }
+
+    &:hover {
+      color: #F4A949;
+      animation: rubberBounce;
+      animation-duration: 1s;
+    }
+  }
+}
+
+
+
+@keyframes rubberBounce {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

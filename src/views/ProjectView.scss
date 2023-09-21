@@ -1,0 +1,33 @@
+@import '../assets/sass/abstracts/mixins';
+
+.projectView {
+  background-image: linear-gradient(to right bottom, #1d1d20, #1d1d20);
+  padding: 10rem 0;
+  margin-bottom: 10rem;
+}
+
+.skew {
+  padding: 35rem 0;
+  margin-top: -12vh; // to remove white space
+}
+
+.projects-wrapper {
+  padding: .5rem 12rem;
+
+  @include respond(tab-port) {
+    padding: .5rem 8rem;
+  }
+
+
+  @media(max-width: 768px) {
+    padding: .5rem 6rem;
+  }
+
+  @media(max-width: 576px) {
+    padding: .5rem 4rem;
+  }
+
+  @include respond(phone) {
+    padding: .5rem 4rem;
+  }
+}

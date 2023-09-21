@@ -1,0 +1,80 @@
+.contactFormContainer {
+  margin: 0 auto;
+  background-color: rgba(#1d1d20, .6);
+  margin-top: 6rem;
+  padding: 4rem 4rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.contactFormHeader {
+  color: #fff;
+  font-size: 4rem;
+}
+
+.contactFormHeaderBar {
+  background: #fff;
+  font-size: 1.6rem;
+  height: 4px;
+  margin: 2.5rem 0 4rem 0;
+  width: 11rem;
+}
+
+.contactFormPrompt {
+  color: #04c2c9;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.contactForm {
+  position: relative;
+  margin: 4rem auto;
+  min-width: 95%;
+  display: flex;
+  flex-direction: column;
+
+  & input[type='text'],
+  & textarea {
+    background: #1e242c;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 3px;
+    outline: none;
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+
+  & textarea {
+    margin-bottom: 5px;
+    min-height: 15rem;
+  }
+
+  & .submit-button {
+    background: transparent;
+    color: #fff;
+    align-self: flex-end;
+    font-size: 2rem;
+    width: 20rem;
+    margin: 5px 0 0 0;
+    outline: 0;
+    padding: 1rem 3rem;
+    border: 2px solid #fff;
+    box-sizing: inherit;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

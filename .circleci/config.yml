@@ -89,37 +89,6 @@ jobs:
           name: Run prettier check
           command: npm run prettier:check
 
-  # unit-test:
-  #   executor: app-executor
-  #   steps:
-  #     - checkout
-  #     - *show-current-branch-name
-  #     - *restore-cache
-  #     - run:
-  #         name: Run unit test
-  #         command: npm run test
-
-  # publish-to-docker-hub:
-  #   executor: docker-publisher
-  #   steps:
-  #     - checkout
-  #     - setup_remote_docker
-  #     - *restore-cache
-  #     - run: docker login -u "${DOCKER_HUB_USER}" -p "${DOCKER_HUB_PASSWORD}"
-  #     - run: docker build --build-arg -t ${IMAGE_NAME}:latest .
-  #     - run:
-  #         name: Tag and push to docker hub.
-  #         command: |
-  #           if [ "${CIRCLE_BRANCH}" == "master" ]
-  #           then
-  #             docker tag ${IMAGE_NAME}:latest ${IMAGE_NAME}:stable-${CIRCLE_BUILD_NUM} && docker push ${IMAGE_NAME}:stable-${CIRCLE_BUILD_NUM}
-  #           elif [ "${CIRCLE_BRANCH}" == "staging" ]
-  #           then
-  #             docker tag ${IMAGE_NAME}:latest ${IMAGE_NAME}:staging-${CIRCLE_BUILD_NUM} && docker push ${IMAGE_NAME}:staging-${CIRCLE_BUILD_NUM}
-  #           else
-  #             docker tag ${IMAGE_NAME}:latest ${IMAGE_NAME}:dev-${CIRCLE_BUILD_NUM} && docker push ${IMAGE_NAME}:dev-${CIRCLE_BUILD_NUM}
-  #           fi
-
   terraform-validate:
     executor: terraform-executor
     steps:

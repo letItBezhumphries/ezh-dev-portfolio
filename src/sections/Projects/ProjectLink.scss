@@ -1,0 +1,41 @@
+.project-link-container {
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 2rem;
+
+  // @media(min-width: 768px) {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+}
+
+.project-link {
+  font-family: 'Montserrat';
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  width: max-content;
+  align-items: center;
+  color: #c511e5;
+
+  &:hover {
+    color: #e049fb;
+    opacity: .9;
+
+    svg {
+      transform: translateX(10px);
+    }
+
+  }
+
+  svg {
+    margin-left: 5px;
+    transition: transform .3s ease-out;
+  }
+
+}
+

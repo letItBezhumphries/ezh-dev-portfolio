@@ -1,28 +1,68 @@
+import BackgroundHeader from './components/header/BackgroundHeader';
+import { useState } from 'react';
+import styled from 'styled-components';
+import SideNav from './components/navigation/SideNav';
+import AboutView from './views/AboutView';
+import SkillsView from './views/SkillsView';
+import ProjectView from './views/ProjectView';
+import ContacView from './views/ContactView';
+import Footer from './components/footer/Footer';
+import portfolioData from './assets/data/portfolioData';
 import './App.scss';
-import Header from './components/header';
-import AboutMe from './components/sections/AboutMe';
-import Projects from './components/sections/Projects';
-import Certifications from './components/sections/Certifications';
-import Education from './components/sections/Education';
-import Information from './components/sections/Information';
-import Music from './components/sections/Music';
-import Skills from './components/sections/Skills';
 
-function App() {
+const ScrollerBody = styled.div`
+  height: 100%;
+  overflow: visible;
+  position: relative;
+`;
+
+const App = () => {
+  const [showSideNav, setShowSideNav] = useState(false);
+  const [activeSection, setActiveSection] = useState('intro');
+
+  const handleActivateSection = (section) => {
+    setActiveSection(section);
+  };
+
+  const handleHideSideNav = () => {
+    setShowSideNav(false);
+  };
+
+  const handleShowSideNav = () => {
+    setShowSideNav(true);
+  };
+
   return (
     <div className="App">
-      <Header />
-      <div className="content-wrapper">
-        <AboutMe />
-        <Information />
-        <Projects />
-        <Skills />
-        <Education />
-        <Certifications />
-        <Music />
-      </div>
+      <SideNav
+        sections={[
+          { href: '#intro', label: 'Intro', eventkey: '1' },
+          { href: '#about', label: 'About', eventkey: '2' },
+          { href: '#skills', label: 'Skills', eventkey: '3' },
+          { href: '#projects', label: 'Projects', eventkey: '4' },
+          { href: '#contact', label: 'Contact', eventkey: '5' }
+        ]}
+        showSideNav={showSideNav}
+        currentActiveSection={activeSection}
+      />
+      <ScrollerBody data-spy="scroll" data-target="#side-nav" data-offset="0" tabIndex="0">
+        <BackgroundHeader
+          headerClass={'landing'}
+          showSideNav={showSideNav}
+          handleHideSideNav={handleHideSideNav}
+          handleShowSideNav={handleShowSideNav}
+          handleActivateSection={handleActivateSection}
+        ></BackgroundHeader>
+        <main>
+          <AboutView intro={portfolioData.about[0]} firstName={portfolioData.about[1]} aboutText={portfolioData.about.slice(2)} handleActivateSection={handleActivateSection} />
+          <SkillsView handleActivateSection={handleActivateSection} />
+          <ProjectView handleActivateSection={handleActivateSection} />
+          <ContacView handleActivateSection={handleActivateSection} />
+        </main>
+        <Footer />
+      </ScrollerBody>
     </div>
   );
-}
+};
 
 export default App;
