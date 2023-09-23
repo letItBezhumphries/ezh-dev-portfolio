@@ -116,7 +116,7 @@ jobs:
             cd artifacts/infrastructure/
             terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
-            terraform plan
+            terraform plan -var "site_domain=ezhumphries.dev" -var "cloudflare_api_token=${CLOUDFLARE_API_TOKEN}"
       - run:
           name: Terraform Apply
           command: |
