@@ -2,7 +2,8 @@ version: 2.1
 executors:
   app-executor:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:latest
+      # - image: circleci/node:latest
     working_directory: ~/repo
   # docker-publisher:
   #   environment:
@@ -11,6 +12,7 @@ executors:
   #     - image: circleci/buildpack-deps:stretch
   terraform-executor:
     docker:
+    # - image: hashicorp/terraform:1.5.2
       - image: hashicorp/terraform:latest
 
 aliases:
@@ -124,6 +126,7 @@ jobs:
             terraform apply --auto-approve
             terraform output ezhdevportfolio_bucket_name > ../ezhdevportfolio_bucket_name.txt
             terraform output cloudfront_distribution_id > ../cloudfront_distribution_id.txt
+
       - persist_to_workspace:
           root: ./
           paths:
