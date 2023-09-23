@@ -3,7 +3,7 @@
 #####################
 
 resource "aws_s3_bucket" "site_bucket" {
-  bucket = var.site_domain
+  bucket        = var.site_domain
   force_destroy = true
 
   tags = local.common_tags

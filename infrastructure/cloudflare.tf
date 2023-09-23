@@ -30,8 +30,8 @@ resource "cloudflare_record" "site_cname" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
   name    = var.site_domain
   # value   = aws_cloudfront_distribution.s3_distribution.domain_name
-  value   = aws_cloudfront_distribution.dist.domain_name
-  type    = "CNAME"
+  value = aws_cloudfront_distribution.dist.domain_name
+  type  = "CNAME"
 
   ttl     = 1
   proxied = true
@@ -41,8 +41,8 @@ resource "cloudflare_record" "www" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
   name    = "www"
   # value   = aws_cloudfront_distribution.s3_distribution.domain_name
-  value   = aws_cloudfront_distribution.dist.domain_name
-  type    = "CNAME"
+  value = aws_cloudfront_distribution.dist.domain_name
+  type  = "CNAME"
 
   ttl     = 1
   proxied = true

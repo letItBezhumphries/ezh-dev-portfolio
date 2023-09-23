@@ -34,9 +34,9 @@ resource "aws_cloudfront_distribution" "dist" {
   ]
 
   default_cache_behavior {
-    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
-    cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = aws_s3_bucket.site_bucket.id
+    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = aws_s3_bucket.site_bucket.id
     # viewer_protocol_policy = "redirect-to-https"
     viewer_protocol_policy = "allow-all"
     compress               = true

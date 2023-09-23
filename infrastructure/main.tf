@@ -24,7 +24,7 @@ terraform {
 # for tags set up in aws resources
 locals {
   bucket_name = "${random_pet.bucket.id}-${var.site_domain}"
-  prefix = "${var.prefix}-${terraform.workspace}"
+  prefix      = "${var.prefix}-${terraform.workspace}"
   common_tags = {
     Environment = terraform.workspace
     Project     = var.project
