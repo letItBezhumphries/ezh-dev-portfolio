@@ -2,7 +2,10 @@ provider "aws" {
   region = var.aws_region
 }
 
-provider "cloudflare" {}
+provider "cloudflare" {
+  # api_token = var.cloudflare_api_token
+}
+# provider "cloudflare" {}
 
 resource "random_pet" "bucket" {
   length = 1
@@ -13,7 +16,7 @@ terraform {
   backend "s3" {
     bucket  = "ezhumphries-dev-portfolio-tf-state"
     key     = "ezhumphries-dev-portfolio.tfstate"
-    region  = var.aws_region
+    region  = "us-west-2"
     encrypt = true
   }
 }

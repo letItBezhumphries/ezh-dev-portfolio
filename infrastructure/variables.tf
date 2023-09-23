@@ -53,3 +53,7 @@ variable "custom_error_response" {
     }
   ]
 }
+
+variable "cloudflare_api_token" {
+  type        = string
+}

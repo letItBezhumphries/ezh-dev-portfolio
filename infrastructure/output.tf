@@ -4,7 +4,8 @@ output "ezhdevportfolio_bucket_name" {
 }
 
 output "cloudfront_distribution_id" {
-  value = aws_cloudfront_distribution.s3_distribution.id
+  # value = aws_cloudfront_distribution.s3_distribution.id
+  value = aws_cloudfront_distribution.dist.id
 }
 
 output "bucket_endpoint" {
@@ -14,7 +15,8 @@ output "bucket_endpoint" {
 
 output "cloudfront_endpoint" {
   description = "Cloudfront endpoint"
-  value       = aws_cloudfront_distribution.s3_distribution.domain_name
+  # value       = aws_cloudfront_distribution.s3_distribution.domain_name
+  value       = aws_cloudfront_distribution.dist.domain_name
 }
 
 output "domain_name" {

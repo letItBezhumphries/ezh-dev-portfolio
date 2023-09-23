@@ -3,7 +3,7 @@
 #####################
 
 resource "aws_s3_bucket" "site_bucket" {
-  bucket = local.bucket_name
+  bucket = var.site_domain
   force_destroy = true
 
   tags = local.common_tags
@@ -16,15 +16,25 @@ resource "aws_s3_bucket_ownership_controls" "site" {
   }
 }
 
+# resource "aws_s3_bucket_public_access_block" "site" {
+#   bucket = aws_s3_bucket.site_bucket.id
+
+#   block_public_acls       = true
+#   block_public_policy     = true
+#   restrict_public_buckets = true
+#   ignore_public_acls      = true
+# }
+
+# # tutorial version
 resource "aws_s3_bucket_public_access_block" "site" {
   bucket = aws_s3_bucket.site_bucket.id
 
-  block_public_acls       = true
-  block_public_policy     = true
-  restrict_public_buckets = true
-  ignore_public_acls      = true
-
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
+
 
 resource "aws_s3_bucket_acl" "site" {
   depends_on = [
@@ -33,9 +43,13 @@ resource "aws_s3_bucket_acl" "site" {
   ]
 
   bucket = aws_s3_bucket.site_bucket.id
-  acl    = "private"
-  # acl = "public-read"
+
+  # acl    = "private"
+  # tutorial version below
+  acl = "public-read"
 }
+
+
 
 resource "aws_s3_bucket_versioning" "site" {
   bucket = aws_s3_bucket.site_bucket.id
@@ -62,6 +76,10 @@ resource "aws_s3_bucket_policy" "site" {
       },
     ]
   })
+  # tutorial version
+  depends_on = [
+    aws_s3_bucket_public_access_block.site
+  ]
 }
 
 resource "aws_s3_bucket_website_configuration" "site" {
@@ -75,21 +93,29 @@ resource "aws_s3_bucket_website_configuration" "site" {
   }
 }
 
-# data "aws_iam_policy_document" "ezhdevportfolio_bucket_policy_document" {
-#   statement {
-#     actions = ["s3:GetObject"]
+# tutorial version below
+resource "aws_s3_bucket" "www" {
+  bucket = "www.${var.site_domain}"
+}
 
-#     resources = [
-#       aws_s3_bucket.site_bucket.arn,
-#       "${aws_s3_bucket.site_bucket.arn}/*"
-#     ]
+resource "aws_s3_bucket_ownership_controls" "www" {
+  bucket = aws_s3_bucket.www.id
+  rule {
+    object_ownership = "BucketOwnerPreferred"
+  }
+}
 
-#     principals {
-#       type        = "AWS"
-#       identifiers = [aws_cloudfront_origin_access_identity.s3_oai.iam_arn]
-#     }
-#   }
-# }
+resource "aws_s3_bucket_acl" "www" {
+  bucket = aws_s3_bucket.www.id
 
+  acl        = "private"
+  depends_on = [aws_s3_bucket_ownership_controls.www]
+}
 
+resource "aws_s3_bucket_website_configuration" "www" {
+  bucket = aws_s3_bucket.www.id
 
+  redirect_all_requests_to {
+    host_name = var.site_domain
+  }
+}

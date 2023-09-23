@@ -1,11 +1,13 @@
 #####################
 # Cloudfront Resources
 #####################
+
 # resource "aws_cloudfront_origin_access_identity" "s3_oai" {
 #   comment = "OAI for ezhdevportfolio s3 bucket"
 # }
 
-resource "aws_cloudfront_distribution" "s3_distribution" {
+# resource "aws_cloudfront_distribution" "s3_distribution" {
+resource "aws_cloudfront_distribution" "dist" {
   retain_on_delete    = false
   price_class         = "PriceClass_All"
   enabled             = true
@@ -35,8 +37,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD"]
     target_origin_id       = aws_s3_bucket.site_bucket.id
-    viewer_protocol_policy = "redirect-to-https"
-    # viewer_protocol_policy = "allow-all"
+    # viewer_protocol_policy = "redirect-to-https"
+    viewer_protocol_policy = "allow-all"
     compress               = true
     min_ttl                = 0
     default_ttl            = 300
@@ -74,4 +76,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   tags = local.common_tags
 }
+
+
 
