@@ -61,6 +61,10 @@
   @include respond(phone) {
     height: 36rem;
   }
+
+  @media only screen and (max-width: 425px) {
+    height: 30rem;
+  }
 }
 
 

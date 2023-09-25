@@ -12,16 +12,17 @@ import Certifications from './Certifications';
 
 const SkillsWrapper = styled.div`
   font-family: 'Montserrat';
+  overflow-x: hidden;
 `;
 
 const Intro = styled.p`
-  padding: 2rem 4rem;
+  padding: 2rem 4rem 2rem 0.5rem;
   color: #fff;
   font-size: 1.8rem;
   font-family: inherit;
 `;
 
-const SkillsHeading = styled.h2`
+const GroupHeading = styled.h2`
   text-transform: uppercase;
   font-family: 'Montserrat';
   font-weight: 700;
@@ -30,6 +31,10 @@ const SkillsHeading = styled.h2`
 
   & span {
     font-weight: 500;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
   }
 `;
 
@@ -94,12 +99,12 @@ const Skills = ({ skillgroups, intro }) => {
 
       <ContainerRow columns={2}>
         <div style={{ color: '#fff', width: '50%', display: 'inline-block', verticalAlign: 'top', overflow: 'hidden', whiteSpace: 'nowrap' }} col={1}>
-          <SkillsHeading>
+          <GroupHeading>
             <HeadingIcon>
               <BsTools style={{ height: '35px', width: '35px' }} />
             </HeadingIcon>
             <span>Tools</span>
-          </SkillsHeading>
+          </GroupHeading>
           <List>
             <ListItem>
               <LuCheck /> Git + Github
@@ -117,12 +122,12 @@ const Skills = ({ skillgroups, intro }) => {
         </div>
 
         <div style={{ color: '#fff', width: '50%', display: 'inline-block', verticalAlign: 'top', overflow: 'hidden', whiteSpace: 'nowrap' }} col={1}>
-          <SkillsHeading>
+          <GroupHeading>
             <HeadingIcon>
               <GiLightBulb style={{ height: '35px', width: '35px' }} />
             </HeadingIcon>
             <span>Knowledge</span>
-          </SkillsHeading>
+          </GroupHeading>
           <List>
             <ListItem>
               <LuCheck /> TDD

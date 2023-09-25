@@ -12,6 +12,10 @@ import './AboutView.scss';
 const SectionHeading = styled.h1`
   font-size: 4.8rem;
   font-family: 'Chronicle Display', sans-serif;
+
+  @media only screen and (max-width: 425px) {
+    font-size: 3.2rem;
+  }
 `;
 
 const SectionSubheading = styled.h3`
@@ -21,6 +25,11 @@ const SectionSubheading = styled.h3`
   line-height: 1.5;
   margin-top: 1.6rem;
   font-family: 'Gotham', Helvetica, Arial;
+
+  @media only screen and (max-width: 425px) {
+    width: 45%;
+    font-size: 1.5rem;
+  }
 `;
 
 const AboutView = ({ aboutText, firstName, intro, handleActivateSection }) => {
@@ -35,7 +44,7 @@ const AboutView = ({ aboutText, firstName, intro, handleActivateSection }) => {
   return (
     <section className="aboutView" id="about" data-nav-title="About" data-scrollspy ref={ref}>
       <div className="section-wrapper">
-        <div className="intro fade-in">
+        <div className="about-container">
           <SectionHeading>Hey, I'm {firstName}.</SectionHeading>
           <SectionSubheading>{intro}</SectionSubheading>
           <Divider color="#00b7c7"></Divider>

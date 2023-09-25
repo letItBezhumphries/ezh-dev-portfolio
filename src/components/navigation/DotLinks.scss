@@ -11,9 +11,8 @@
   opacity: 0;
   transition: visibility 0s, opacity 0.5s;
 
-
-  @include respond(phone) {
-    right: 54px;
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 }
 

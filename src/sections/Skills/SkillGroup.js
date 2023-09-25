@@ -10,6 +10,10 @@ const Heading = styled.h3`
   font-weight: 700;
   font-size: 1.5vw;
   margin: 15px 0;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const SkillGroupWrapper = styled.div`
@@ -19,6 +23,10 @@ const SkillGroupWrapper = styled.div`
   font-size: 18px;
   min-height: 200px;
   min-width: 400px;
+
+  @media only screen and (max-width: 425px) {
+    min-width: 90%;
+  }
 `;
 
 const HeadingIcon = styled.span`

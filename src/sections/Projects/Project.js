@@ -27,6 +27,10 @@ const ProjectContainer = styled.div`
   @media only screen and (max-width: 37.5em) {
     padding: 1.5rem;
   }
+
+  @media only screen and (max-width: 425px) {
+    padding: 1rem;
+  }
 `;
 
 const ProjectType = styled.h3`
@@ -66,6 +70,10 @@ const ProjectSummary = styled(motion.p)`
 
   @media only screen and (max-width: 37.5em) {
     font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 0 0.5rem;
   }
 
   & a {

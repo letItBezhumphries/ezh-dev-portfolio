@@ -10,6 +10,11 @@ const ListWrapper = styled.div`
   letter-spacing: 1.05px;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 425px) {
+    margin-top: 1rem;
+    font-size: 0.85em;
+  }
 `;
 
 const InfoList = styled.ul`
@@ -17,14 +22,27 @@ const InfoList = styled.ul`
   flex-direction: column;
   list-style-type: none;
 
+  @media only screen and (max-width: 425px) {
+    padding-left: 1rem;
+  }
+
   & li {
     margin-bottom: 12px;
     font-size: inherit;
     color: #fff;
+    white-space: nowrap;
+
+    @media only screen and (max-width: 425px) {
+      margin-bottom: 10px;
+    }
 
     .list-icon {
       margin-right: 1rem;
       color: #9c9999;
+
+      @media only screen and (max-width: 425px) {
+        margin-right: 0.75rem;
+      }
     }
 
     &:first-child {

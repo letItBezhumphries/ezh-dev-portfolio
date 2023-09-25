@@ -12,31 +12,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-
-  // @include respond(tab-land) {
-  //   width: 62%;
-  //   height: 62%;
-  // }
-
-  // @include respond(tab-port) {
-  //   width: 55%;
-  //   height: 55%;
-  // }
-
-  // @include respond(phone) {
-  //   width: 60%;
-  //   height: 60%;
-  // }
 }
 
 .image-bg {
   display: block;
-  background-color: aqua;
   height: 71%;
   width: 60.5%;
-  // height: ;
-  // height: 82%;
-  // width: 70%;
   z-index: 10000;
   top: 49%;
   left: 49%;

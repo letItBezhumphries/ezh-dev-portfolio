@@ -12,11 +12,21 @@
     @include respond(tab-port) {
       margin-bottom: $gutter-vertical-small;
     }
+
+    @media only screen and (max-width: 575.98px) {
+      margin-bottom: 2rem;
+    }
   }
+
 
   @include respond(tab-port) {
     max-width: 50rem;
     padding: 0 3rem;
+  }
+
+  @media only screen and (max-width: 575.98px) {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
   }
 
   @include clearfix;
@@ -31,9 +41,13 @@
         margin-right: 0; //wont need gutter
         margin-bottom: $gutter-vertical-small;
       }
+
+      @media only screen and (max-width: 575.98px) {
+        margin-bottom: 2rem;
+      }
     }
 
-    @include respond(tab-port) { 
+    @include respond(tab-port) {
       width: 100% !important;
     }
   }

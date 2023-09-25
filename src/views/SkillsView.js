@@ -15,7 +15,7 @@ const SkillsView = ({ handleActivateSection, skew }) => {
 
   return (
     <section className={skew ? 'skillsView skew' : 'skillsView'} id="skills" data-nav-title="Skills" data-scrollspy ref={ref}>
-      <div className="skills-wrapper">
+      <div className="skillsSection-wrapper">
         <Skills intro={portfolioData.skills.intro} skillgroups={portfolioData.skills.skillgroups} />
       </div>
     </section>

@@ -2,8 +2,12 @@
 
 .projectView {
   background-image: linear-gradient(to right bottom, #1d1d20, #1d1d20);
-  padding: 10rem 0;
+  padding: 10rem 0rem;
   margin-bottom: 10rem;
+
+  @media only screen and (max-width: 425px) {
+    padding: 4rem 2rem;
+  }
 }
 
 .skew {
@@ -14,6 +18,7 @@
 .projects-wrapper {
   padding: .5rem 12rem;
 
+  // less than 900px
   @include respond(tab-port) {
     padding: .5rem 8rem;
   }
@@ -23,11 +28,17 @@
     padding: .5rem 6rem;
   }
 
+  // less than 600px
+  @include respond(phone) {
+    padding: .5rem 4rem;
+  }
+
+
   @media(max-width: 576px) {
     padding: .5rem 4rem;
   }
 
-  @include respond(phone) {
-    padding: .5rem 4rem;
+  @media only screen and (max-width: 425px) {
+    padding: 0 0;
   }
 }

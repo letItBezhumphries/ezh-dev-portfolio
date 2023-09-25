@@ -6,27 +6,48 @@
   height: auto;
   min-height: 700px;
   padding: 0;
-  overflow: hidden;
+  // overflow: hidden;
   color: #f2f2f2;
   position: relative;
 }
 
 .section-wrapper {
   padding: 10rem;
+
+  @media only screen and (max-width: 575.98px) {
+    padding: 2.5rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 2rem;
+  }
 }
+
+.about-container {
+
+}
+
 
 .about-wrapper {
   padding-right: 20px;
+
+  @media only screen and (max-width: 425px) {
+    padding-right: 35px;
+  }
 }
 
 .right-side {
-  margin-top: -100px;
+  margin-top: -10rem;
   float: right;
   max-width: 450px;
   padding: 0 0;
   height: auto;
-  float: right;
   width: 35%;
+
+  @media only screen and (max-width: 425px) {
+    margin-top: -22rem;
+    width: 40%;
+  }
 }
 
 .headshot {

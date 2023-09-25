@@ -22,12 +22,20 @@ const Heading = styled.h1`
   font-size: 5rem;
   margin: 2rem 0;
   color: #fff;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 3.6rem;
+    margin: 1rem 0;
+  }
 `;
 
-// border: 0.8px solid #5643fa;
 const SectionCardWrapper = styled.div`
   padding: 4rem 2rem;
   border-radius: 2%;
+
+  @media only screen and (max-width: 600px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const ColumnWrapper = styled.div`
@@ -42,7 +50,7 @@ const RowWrapper = styled.div`
 const CardHeading = styled.h4`
   text-align: left;
   padding: 5px 0;
-  font-size: 20px;
+  font-size: 2rem;
   color: #fff;
 `;
 
@@ -51,12 +59,16 @@ const List = styled.div`
   display: flex;
   flex-direction: column;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: left;
 `;
 
 const ListItem = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const CardList = ({ children }) => {

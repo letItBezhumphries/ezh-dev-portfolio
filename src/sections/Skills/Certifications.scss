@@ -3,12 +3,16 @@
   display: flex;
   padding: 10px 10px 20px 40px;
 
+  @media only screen and (max-width: 575.98px) {
+    padding: 10px 10px 20px 10px;
+  }
+
   &__badge {
     margin-right: 10px;
   }
 
   &__heading {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #778492;
     display: flex;
@@ -17,7 +21,7 @@
   }
 
   &__year {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #b0b7bf;
     margin-left: 12px;

@@ -10,11 +10,17 @@
   line-height: 5.4rem;
   cursor: default;
 
+
+
   @include respond(phone) {
     font-size: 4.2rem;
     line-height: 4.6rem;
   }
 
+  @media only screen and (max-width: 425px) {
+    font-size: 3.4rem;
+    line-height: 3.6rem;
+  }
 
   a {
     text-decoration: none;
@@ -46,6 +52,8 @@
   line-height: 4.6rem;
   cursor: default;
 
+
+
   @media only screen and (max-width: 768px) {
     font-size: 2.8rem;
     line-height: 3.2rem;
@@ -61,7 +69,9 @@
     line-height: 2.6rem;
   }
 
-
+  @media only screen and (max-width: 425px) {
+    font-size: 2.2rem;
+  }
 
 
 

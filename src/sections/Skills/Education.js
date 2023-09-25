@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { SectionCard, CardList, CardListItem } from '../../components/Section';
 
 const Degree = styled.h3`
-  font-size: 1.2em;
   margin-top: 0;
   font-size: inherit;
   font-weight: 700;

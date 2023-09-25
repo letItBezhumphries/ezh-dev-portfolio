@@ -20,6 +20,10 @@ const ProjectTitle = styled.h3`
     font-size: 2.2rem;
   }
 
+  @media only screen and (max-width: 425px) {
+    font-size: 2rem;
+  }
+
   & a {
     text-decoration: none;
     color: inherit;

@@ -2,23 +2,27 @@ import styled from 'styled-components';
 
 const SmallDivider = styled.span`
   display: block;
-  margin: 2px 0 30px 0px;
-  width: 100px;
+  margin: 2px 0 2rem 0px;
+  width: 10rem;
   height: 2px;
 `;
 
 const MediumDivider = styled.span`
   display: block;
   margin: 4px 0 30px 0px;
-  width: 150px;
+  width: 15rem;
   height: 3px;
 `;
 
 const StyledDivider = styled.span`
   display: block;
-  margin: 30px 0;
-  width: 100px;
+  margin: 3rem 0;
+  width: 10rem;
   height: 2px;
+
+  @media only screen and (max-width: 600px) {
+    margin: 1.5rem 0;
+  }
 `;
 
 const CenteredDivider = styled.div`
