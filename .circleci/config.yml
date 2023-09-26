@@ -125,7 +125,6 @@ jobs:
             terraform apply --auto-approve -var "site_domain=ezhumphries.dev" -var "cloudflare_api_token=${CLOUDFLARE_API_TOKEN}"
             terraform output ezhdevportfolio_bucket_name > ../ezhdevportfolio_bucket_name.txt
             terraform output cloudfront_distribution_id > ../cloudfront_distribution_id.txt
-
       - persist_to_workspace:
           root: ./
           paths:
@@ -184,6 +183,8 @@ jobs:
     executor: terraform-executor
     steps:
       - checkout
+      - attach_workspace:
+          at: ./
       - *show-current-branch-name
       - run:
           name: Terraform Destroy
