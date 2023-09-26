@@ -51,12 +51,12 @@ resource "aws_s3_bucket_acl" "site" {
 
 
 
-resource "aws_s3_bucket_versioning" "site" {
-  bucket = aws_s3_bucket.site_bucket.id
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
+# resource "aws_s3_bucket_versioning" "site" {
+#   bucket = aws_s3_bucket.site_bucket.id
+#   versioning_configuration {
+#     status = "Enabled"
+#   }
+# }
 
 resource "aws_s3_bucket_policy" "site" {
   bucket = aws_s3_bucket.site_bucket.id
