@@ -116,13 +116,13 @@ jobs:
             cd artifacts/infrastructure/
             terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
-            terraform plan -var "site_domain=ezhumphries.dev" -var "cloudflare_api_token=${CLOUDFLARE_API_TOKEN}" -destroy
+            terraform plan
       - run:
           name: Terraform Apply
           command: |
             cd artifacts/infrastructure/
             terraform workspace select ${CIRCLE_BRANCH}
-            terraform apply --auto-approve -var "site_domain=ezhumphries.dev" -var "cloudflare_api_token=${CLOUDFLARE_API_TOKEN}"
+            terraform apply --auto-approve
             terraform output ezhdevportfolio_bucket_name > ../ezhdevportfolio_bucket_name.txt
             terraform output cloudfront_distribution_id > ../cloudfront_distribution_id.txt
       - persist_to_workspace:
@@ -183,8 +183,8 @@ jobs:
     executor: terraform-executor
     steps:
       - checkout
-      - attach_workspace:
-          at: ./
+      # - attach_workspace:
+      #     at: ./
       - *show-current-branch-name
       - run:
           name: Terraform Destroy
@@ -192,7 +192,7 @@ jobs:
             cd infrastructure/
             terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
-            terraform destroy -var "site_domain=ezhumphries.dev" -var "cloudflare_api_token=${CLOUDFLARE_API_TOKEN}" --auto-approve
+            terraform destroy --auto-approve
 
 workflows:
   build-and-deploy:
