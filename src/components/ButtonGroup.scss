@@ -21,7 +21,6 @@
   }
 
   &__iconBox {
-    // background: inherit;
     background: #262f38;
     cursor: pointer;
     font-size: 24px;
@@ -35,6 +34,10 @@
     flex-direction: column;
     justify-content: center;
     transition: background .8s, color .8s, box-shadow .8s, transform .8s;
+
+    @media only screen and (max-width: 320px) {
+      margin: 0 5px;
+    }
 
     &:hover {
       background: #9c27b0;

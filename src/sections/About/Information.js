@@ -13,7 +13,8 @@ const ListWrapper = styled.div`
 
   @media only screen and (max-width: 425px) {
     margin-top: 1rem;
-    font-size: 0.85em;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
   }
 `;
 

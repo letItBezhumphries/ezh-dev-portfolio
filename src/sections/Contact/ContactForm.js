@@ -16,6 +16,10 @@ const ContactFormContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 425px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const SlideinLeftVariant = {
@@ -47,7 +51,7 @@ const FormVariant = {
 
 const ContactForm = () => {
   const control = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.1 });
 
   const [toSend, setToSend] = useState({
     name: '',

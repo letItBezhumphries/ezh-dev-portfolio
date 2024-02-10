@@ -26,6 +26,11 @@ import CinemaMoviePageImage from '../img/cinema-app-movie-info.jpg';
 import GetTixHomePageImage from '../img/getTixHomePage.jpg';
 import GetTixPaymentPageImage from '../img/getTixPaymentComponent.jpg';
 
+// project bg images
+import Macbook60 from '../img/macbook-47638.png';
+import Macbook50 from '../img/macbook-53-lg.png';
+import Macbook40 from '../img/macbook-42-lg.png';
+
 const portfolioData = {
   tracks: [
     {
@@ -236,14 +241,20 @@ const portfolioData = {
       githublink: 'https://github.com/letItBezhumphries/micro-brokentable',
       url: '',
       images: [
-        { src: BrokenTableMainImage, alt: 'brokentable site restaurant page' },
+        {
+          src: BrokenTableMainImage,
+          alt: 'brokentable site restaurant page',
+          bg: Macbook60
+        },
         {
           src: PhotogalleryImage,
-          alt: 'brokentable site restaurant photogallery component'
+          alt: 'brokentable site restaurant photogallery component',
+          bg: Macbook50
         },
         {
           src: PhotoScrollerImage,
-          alt: 'brokentable site restaurant photoscroller component'
+          alt: 'brokentable site restaurant photoscroller component',
+          bg: Macbook40
         }
       ],
       background: 'rgb(0, 33, 52)'
@@ -266,11 +277,13 @@ const portfolioData = {
       images: [
         {
           src: ReclarkerArtworkPageImage,
-          alt: 'home page for reclarker gallery site'
+          alt: 'home page for reclarker gallery site',
+          bg: Macbook50
         },
         {
           src: ReclarkerMainImage,
-          alt: 'artwork page for reclarker gallery site'
+          alt: 'artwork page for reclarker gallery site',
+          bg: Macbook50
         }
       ],
       background: 'rgb(0, 33, 52)'
@@ -295,11 +308,13 @@ const portfolioData = {
       images: [
         {
           src: CinemaMainPageImage,
-          alt: 'landing page for cinema movie info app'
+          alt: 'landing page for cinema movie info app',
+          bg: Macbook50
         },
         {
           src: CinemaMoviePageImage,
-          alt: 'movie info page for cinema app'
+          alt: 'movie info page for cinema app',
+          bg: Macbook50
         }
       ],
       background: 'rgb(110, 62, 83)'
@@ -324,10 +339,15 @@ const portfolioData = {
       githublink: 'https://github.com/letItBezhumphries/getTix',
       url: '',
       images: [
-        { src: GetTixHomePageImage, alt: 'landing page for getTix app' },
+        {
+          src: GetTixHomePageImage,
+          alt: 'landing page for getTix app',
+          bg: Macbook40
+        },
         {
           src: GetTixPaymentPageImage,
-          alt: 'payment page for getTix app'
+          alt: 'payment page for getTix app',
+          bg: Macbook40
         }
       ],
       background: 'rgb(21, 67, 121)'

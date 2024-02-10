@@ -7,6 +7,11 @@ const StyledDetails = styled(motion.div)`
   padding: 1rem 2.5rem;
   color: #fff;
   margin: 0 0 3rem 0;
+
+  @media only screen and (max-width: 425px) {
+    padding: 0.5rem 1.25rem;
+    margin: 0 0 1rem 0;
+  }
 `;
 
 const ProjectTitle = styled.h3`
@@ -55,7 +60,7 @@ const BoldText = styled.span`
 `;
 
 const DetailsList = styled.ul`
-  font-family: 'Montserrat';
+  font-family: 'Raleway';
   li {
     margin-left: 2rem;
     padding-left: 1rem;

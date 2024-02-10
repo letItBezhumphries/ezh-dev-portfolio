@@ -2,11 +2,6 @@
 # Cloudfront Resources
 #####################
 
-# resource "aws_cloudfront_origin_access_identity" "s3_oai" {
-#   comment = "OAI for ezhdevportfolio s3 bucket"
-# }
-
-# resource "aws_cloudfront_distribution" "s3_distribution" {
 resource "aws_cloudfront_distribution" "dist" {
   retain_on_delete    = false
   price_class         = "PriceClass_All"
@@ -76,6 +71,5 @@ resource "aws_cloudfront_distribution" "dist" {
 
   tags = local.common_tags
 }
-
 
 

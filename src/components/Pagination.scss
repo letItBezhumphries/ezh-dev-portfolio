@@ -1,20 +1,5 @@
 .projectNav {
-  // position: absolute;
-  // z-index: 4;
-  // opacity: 1;
-  // -webkit-transform: translateZ(0);
-  // -ms-transform: translateZ(0);
-  // transform: translateZ(0);
-  // left: 0!important;
-  // right: 0;
-  // margin: 0 auto!important;
-  // bottom: 17px;
-
-  // @media (min-width: 992px) {
-  //   bottom: 50px!important;
-  // }
-
-  // background-color: bisque;
+  margin-bottom: 2rem;
 
   ul {
     display: flex;
@@ -78,7 +63,7 @@
           margin: -6px 0 0 -6px;
           border-radius: 100%;
         }
-   
+
       }
     }
   }

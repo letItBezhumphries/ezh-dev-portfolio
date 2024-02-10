@@ -1,6 +1,7 @@
 @import '../assets/sass/abstracts/mixins';
 
 .laptop-bg {
+  // background-image: url('../assets/img/macbook-47638-xsm.png');
   background-image: url('../assets/img/macbook-47638.png');
   background-position: center;
   background-size: contain;
@@ -12,6 +13,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  // @media(min-resolution: 192dpi) and (min-width: 400px) {
+  //   background-image: url('../assets/img/macbook-47638.png');
+  // }
 }
 
 .image-bg {
@@ -25,6 +29,11 @@
   // left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+
+  // @include respond(big-desktop) {
+  //   height: 71%;
+  //   width: 60.5%;
+  // }
 
   @media only screen and (max-width: 991.98px) {
     width: 68%;
@@ -49,6 +58,11 @@
   @media only screen and (max-width: 575.98px) {
     width: 70%;
     height: 64%;
+  };
+
+  @media only screen and (max-width: 320px) {
+    width: 70%;
+    height: 47%;
   };
 }
 

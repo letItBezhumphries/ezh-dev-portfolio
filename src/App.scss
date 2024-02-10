@@ -1,22 +1,6 @@
 @import './assets/sass/abstracts/mixins';
 
 @font-face {
-  font-family: 'brandon_textregular';
-  src: url('./assets/fonts/brandontext-regular-webfont.woff2') format('woff2'),
-    url('./assets/fonts/brandontext-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'brandon_textthin';
-  src: url('./assets/fonts/brandontext-thin-webfont.woff2') format('woff2'),
-    url('./assets/fonts/brandontext-thin-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'source_sans_pro';
   src: url('./assets/fonts/source-sans-pro/sourcesanspro-it-webfont.woff2') format('woff2'),
     url('./assets/fonts/source-sans-pro/sourcesanspro-it-webfont.woff') format('woff');
@@ -51,17 +35,22 @@ html {
   }
 }
 
-body {
+body, html {
   box-sizing: border-box;
 }
 
-.App {
+body, html, .App {
   margin: 0 0;
+  padding: 0 0;
+  background: #1d1d20;
   font-family: 'Chronicle Display', sans-serif;
 
   height: 100% !important;
 }
 
 
-
-
+#app-body {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

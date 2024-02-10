@@ -1,9 +1,9 @@
 @import '../assets/sass/abstracts/mixins';
 
 .projectView {
-  background-image: linear-gradient(to right bottom, #1d1d20, #1d1d20);
+  background: #1d1d20;
   padding: 10rem 0rem;
-  margin-bottom: 10rem;
+  margin-bottom: 19rem;
 
   @media only screen and (max-width: 425px) {
     padding: 4rem 2rem;
@@ -40,5 +40,6 @@
 
   @media only screen and (max-width: 425px) {
     padding: 0 0;
+    margin-top: 5rem;
   }
 }

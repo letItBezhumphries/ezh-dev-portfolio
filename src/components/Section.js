@@ -36,6 +36,10 @@ const SectionCardWrapper = styled.div`
   @media only screen and (max-width: 600px) {
     padding: 2rem 2rem;
   }
+
+  @media only screen and (max-width: 425px) {
+    padding: 1rem 0.5rem;
+  }
 `;
 
 const ColumnWrapper = styled.div`
@@ -45,6 +49,10 @@ const ColumnWrapper = styled.div`
 
 const RowWrapper = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const CardHeading = styled.h4`

@@ -10,7 +10,8 @@ import { useEffect } from 'react';
 const ProjectContainer = styled.div`
   width: 100%;
   padding: 6rem;
-  font-family: 'brandon_textthin';
+  font-weight: 600;
+  font-family: 'Raleway';
 
   @media only screen and (max-width: 87.5em) {
     padding: 4rem;
@@ -29,7 +30,7 @@ const ProjectContainer = styled.div`
   }
 
   @media only screen and (max-width: 425px) {
-    padding: 1rem;
+    padding: 0 0;
   }
 `;
 
@@ -47,7 +48,7 @@ const ProjectType = styled.h3`
   }
 
   @media only screen and (max-width: 37.5em) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -55,7 +56,7 @@ const ProjectSummary = styled(motion.p)`
   padding: 0 0 1.5rem;
   margin: 2rem 0 1rem 0;
   font-size: 1.8rem;
-  font-family: 'brandon_textthin';
+  font-family: 'Raleway';
   font-weight: 400;
   line-height: 2.4rem;
   color: #fff;
@@ -74,6 +75,7 @@ const ProjectSummary = styled(motion.p)`
 
   @media only screen and (max-width: 425px) {
     padding: 0 0.5rem;
+    font-size: 1.2rem;
   }
 
   & a {

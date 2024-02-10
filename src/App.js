@@ -1,6 +1,5 @@
 import BackgroundHeader from './components/header/BackgroundHeader';
 import { useState } from 'react';
-import styled from 'styled-components';
 import SideNav from './components/navigation/SideNav';
 import AboutView from './views/AboutView';
 import SkillsView from './views/SkillsView';
@@ -9,12 +8,6 @@ import ContacView from './views/ContactView';
 import Footer from './components/footer/Footer';
 import portfolioData from './assets/data/portfolioData';
 import './App.scss';
-
-const ScrollerBody = styled.div`
-  height: 100%;
-  overflow: visible;
-  position: relative;
-`;
 
 const App = () => {
   const [showSideNav, setShowSideNav] = useState(false);
@@ -45,14 +38,8 @@ const App = () => {
         showSideNav={showSideNav}
         currentActiveSection={activeSection}
       />
-      <ScrollerBody data-spy="scroll" data-target="#side-nav" data-offset="0" tabIndex="0">
-        <BackgroundHeader
-          headerClass={'landing'}
-          showSideNav={showSideNav}
-          handleHideSideNav={handleHideSideNav}
-          handleShowSideNav={handleShowSideNav}
-          handleActivateSection={handleActivateSection}
-        ></BackgroundHeader>
+      <div id="app-body">
+        <BackgroundHeader showSideNav={showSideNav} handleHideSideNav={handleHideSideNav} handleShowSideNav={handleShowSideNav} handleActivateSection={handleActivateSection}></BackgroundHeader>
         <main>
           <AboutView intro={portfolioData.about[0]} firstName={portfolioData.about[1]} aboutText={portfolioData.about.slice(2)} handleActivateSection={handleActivateSection} />
           <SkillsView handleActivateSection={handleActivateSection} />
@@ -60,7 +47,7 @@ const App = () => {
           <ContacView handleActivateSection={handleActivateSection} />
         </main>
         <Footer />
-      </ScrollerBody>
+      </div>
     </div>
   );
 };

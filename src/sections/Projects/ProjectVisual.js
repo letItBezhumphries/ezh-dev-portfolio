@@ -18,7 +18,7 @@ const SlideinRightVariant = {
 const ProjectVisual = ({ images, featured }) => {
   const [currentPhotoIdx, setCurrentPhotoIdx] = useState(0);
   const control = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (inView) {
@@ -49,7 +49,7 @@ const ProjectVisual = ({ images, featured }) => {
       <span className="project-visual__icon-box project-visual__icon-box--left" onClick={() => handlePhotoPrev(currentPhotoIdx)}>
         <FontAwesomeIcon icon={faCircleArrowLeft} size="2xl" className="project-visual__icon visual__icon--left" />
       </span>
-      <Laptop image={images[currentPhotoIdx]} />
+      <Laptop image={images[currentPhotoIdx]} bg={images[currentPhotoIdx].bg} />
       <span className="project-visual__icon-box project-visual__icon-box--right" onClick={() => handlePhotoNext(currentPhotoIdx)}>
         <FontAwesomeIcon icon={faCircleArrowRight} size="2xl" className="project-visual__icon visual__icon--right" />
       </span>

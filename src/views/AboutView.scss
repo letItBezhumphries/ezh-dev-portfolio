@@ -6,9 +6,9 @@
   height: auto;
   min-height: 700px;
   padding: 0;
-  // overflow: hidden;
   color: #f2f2f2;
   position: relative;
+  overflow: hidden;
 }
 
 .section-wrapper {
@@ -34,6 +34,12 @@
   @media only screen and (max-width: 425px) {
     padding-right: 35px;
   }
+
+  @media only screen and (max-width: 320px) {
+    // width: 50%;
+    padding-right: 0px;
+    position: relative;
+  }
 }
 
 .right-side {
@@ -44,10 +50,18 @@
   height: auto;
   width: 35%;
 
+
+
   @media only screen and (max-width: 425px) {
     margin-top: -22rem;
     width: 40%;
   }
+
+  @media only screen and (max-width: 320px) {
+    width: 50%;
+    // position: absolute;
+  }
+
 }
 
 .headshot {
@@ -67,7 +81,9 @@
 .about-text {
   margin-bottom: 10px;
   font-size: 1.6rem;
-  font-family: 'brandon_textregular';
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .about-music-wrapper {
@@ -79,5 +95,8 @@
   flex-direction: row;
   justify-content: space-between;
 
+  @media only screen and (max-width: 425px) {
+    margin: 0 0 2rem 0;
+  }
 
 }

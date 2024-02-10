@@ -11,8 +11,8 @@ executors:
   #     - image: circleci/buildpack-deps:stretch
   terraform-executor:
     docker:
-     - image: hashicorp/terraform:1.5.2
-    #  - image: hashicorp/terraform:latest
+    # - image: hashicorp/terraform:1.5.2
+      - image: hashicorp/terraform:latest
 
 aliases:
   - &show-current-branch-name
@@ -116,7 +116,7 @@ jobs:
             cd artifacts/infrastructure/
             terraform init
             terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
-            terraform plan -replace='aws_s3_bucket_policy.site'
+            terraform plan -destroy
       - run:
           name: Terraform Apply
           command: |

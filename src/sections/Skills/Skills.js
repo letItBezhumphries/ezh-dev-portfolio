@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { SectionHeading } from '../../components/Section';
+import useWindowDimensions from '../../utils/sizes';
 import ContainerRow from '../../components/ContainerRow';
 import Education from './Education';
 import SkillGroup from './SkillGroup';
@@ -58,12 +59,24 @@ const HeadingIcon = styled.span`
 `;
 
 const Skills = ({ skillgroups, intro }) => {
+  let { width } = useWindowDimensions();
+  let rightColumnTooltip;
+  let leftColumnTooltip;
+
+  if (width <= 901) {
+    rightColumnTooltip = 'bottom';
+    leftColumnTooltip = 'bottom';
+  } else {
+    rightColumnTooltip = 'left';
+    leftColumnTooltip = 'right';
+  }
+
   return (
     <SkillsWrapper>
       <SectionHeading heading={'Skills'} />
       <Intro>{intro}</Intro>
       <ContainerRow columns={2}>
-        <SkillGroup skillgroup={skillgroups[0]} col={1}>
+        <SkillGroup skillgroup={skillgroups[0]} col={1} tooltipLoc={leftColumnTooltip}>
           <FaSquareJs />
           <FaNodeJs />
           <FaReact />
@@ -82,13 +95,13 @@ const Skills = ({ skillgroups, intro }) => {
             justifyContent: 'space-between'
           }}
         >
-          <SkillGroup skillgroup={skillgroups[1]} tooltipLoc={'left'}>
+          <SkillGroup skillgroup={skillgroups[1]} tooltipLoc={rightColumnTooltip}>
             <SiMongodb />
             <SiMysql />
             <SiRedis />
           </SkillGroup>
 
-          <SkillGroup skillgroup={skillgroups[2]} tooltipLoc={'left'}>
+          <SkillGroup skillgroup={skillgroups[2]} tooltipLoc={rightColumnTooltip}>
             <SiTerraform />
             <SiDocker />
             <SiPacker />
@@ -98,7 +111,7 @@ const Skills = ({ skillgroups, intro }) => {
       </ContainerRow>
 
       <ContainerRow columns={2}>
-        <div style={{ color: '#fff', width: '50%', display: 'inline-block', verticalAlign: 'top', overflow: 'hidden', whiteSpace: 'nowrap' }} col={1}>
+        <div style={{ color: '#fff', width: '80%', display: 'inline-block', verticalAlign: 'top', overflow: 'hidden', whiteSpace: 'nowrap' }} col={1}>
           <GroupHeading>
             <HeadingIcon>
               <BsTools style={{ height: '35px', width: '35px' }} />
@@ -121,7 +134,7 @@ const Skills = ({ skillgroups, intro }) => {
           </List>
         </div>
 
-        <div style={{ color: '#fff', width: '50%', display: 'inline-block', verticalAlign: 'top', overflow: 'hidden', whiteSpace: 'nowrap' }} col={1}>
+        <div style={{ color: '#fff', width: '80%', display: 'inline-block', verticalAlign: 'top', overflow: 'hidden', whiteSpace: 'nowrap' }} col={1}>
           <GroupHeading>
             <HeadingIcon>
               <GiLightBulb style={{ height: '35px', width: '35px' }} />

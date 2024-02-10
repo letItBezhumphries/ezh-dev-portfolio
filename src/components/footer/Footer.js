@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ButtonGroup from '../ButtonGroup';
 
-const FooterSection = styled.section`
+const FooterSection = styled.footer`
   background: linear-gradient(45deg, rgb(162, 10, 162) 0, black 100%);
   height: 200px;
   min-height: 100px;
