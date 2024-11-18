@@ -42,8 +42,8 @@ import GetTixHomePageImage from '../img/macbook-getTix-landing.png';
 import GetTixPaymentPageImage from '../img/macbook-getTix-payment-screen.png';
 // import GetTixPaymentPageImage from '../img/getTixPaymentComponent.jpg';
 
-import ProshopProductPage from '../img/macbook-mernproshop-productpage.png';
-import ProshopHomePage from '../img/macbook-mernshop-main.png';
+// import ProshopProductPage from '../img/macbook-mernproshop-productpage.png';
+// import ProshopHomePage from '../img/macbook-mernshop-main.png';
 
 // // project bg images
 import Macbook60 from '../img/macbook-47638.png';
