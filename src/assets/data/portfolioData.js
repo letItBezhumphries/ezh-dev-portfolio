@@ -16,17 +16,36 @@ import tokimonsta from './tokimonsta.jpg';
 import biggrams from './biggrams.jpg';
 
 // project images
-import BrokenTableMainImage from '../img/brokentable-restaurant-page-main.jpg';
-import PhotogalleryImage from '../img/brokentable-photogalleryandmap.jpg';
-import PhotoScrollerImage from '../img/brokentable-photoscroller.jpg';
-import ReclarkerMainImage from '../img/reclarker-main.jpg';
-import ReclarkerArtworkPageImage from '../img/reclarker-artworkpage.jpg';
-import CinemaMainPageImage from '../img/cinema-app.jpg';
-import CinemaMoviePageImage from '../img/cinema-app-movie-info.jpg';
-import GetTixHomePageImage from '../img/getTixHomePage.jpg';
-import GetTixPaymentPageImage from '../img/getTixPaymentComponent.jpg';
+// import BrokenTableMainImage from '../img/brokentable-restaurant-page-main.jpg';
+import BrokenTableMainImage from '../img/macbook-brokentable-restaurantpage.png';
+import PhotogalleryImage from '../img/macbook-brokentable-photogallery.png';
+// import PhotogalleryImage from '../img/brokentable-photogalleryandmap.jpg';
 
-// project bg images
+import PhotoScrollerImage from '../img/macbook-brokentable-photoscroller.png';
+// import PhotoScrollerImage from '../img/brokentable-photoscroller.jpg';
+
+import ReclarkerMainImage from '../img/macbook-reclarker-main.png';
+// import ReclarkerMainImage from '../img/reclarker-main.jpg';
+
+import ReclarkerArtworkPageImage from '../img/macbook-reclarker-artworkpage.png';
+// import ReclarkerArtworkPageImage from '../img/reclarker-artworkpage.jpg';
+
+import CinemaMainPageImage from '../img/macbook-cinema-scroller.png';
+// import CinemaMainPageImage from '../img/cinema-app.jpg';
+
+import CinemaMoviePageImage from '../img/macbook-cinema-overview.png';
+// import CinemaMoviePageImage from '../img/cinema-app-movie-info.jpg';
+import CinemaMovieMediaImage from '../img/macbook-cinema-app-media.png';
+
+import GetTixHomePageImage from '../img/macbook-getTix-landing.png';
+// import GetTixHomePageImage from '../img/getTixHomePage.jpg';
+import GetTixPaymentPageImage from '../img/macbook-getTix-payment-screen.png';
+// import GetTixPaymentPageImage from '../img/getTixPaymentComponent.jpg';
+
+import ProshopProductPage from '../img/macbook-mernproshop-productpage.png';
+import ProshopHomePage from '../img/macbook-mernshop-main.png';
+
+// // project bg images
 import Macbook60 from '../img/macbook-47638.png';
 import Macbook50 from '../img/macbook-53-lg.png';
 import Macbook40 from '../img/macbook-42-lg.png';
@@ -76,10 +95,10 @@ const portfolioData = {
         skills: [
           {
             skill: 'Javascript',
-            tooltip: 'I have over 4 years experience in JS and Node building upon my training at Hack Reactor the top coding Bootcamp in the US.',
+            tooltip: 'I have over 5 years experience in JS and Node building upon my training at Hack Reactor the top coding Bootcamp in the US.',
             id: 'javascript-skill',
             level: 'Expert',
-            percentage: '90%',
+            percentage: '95%',
             icon: faJs
           },
           {
@@ -314,6 +333,11 @@ const portfolioData = {
         {
           src: CinemaMoviePageImage,
           alt: 'movie info page for cinema app',
+          bg: Macbook50
+        },
+        {
+          src: CinemaMovieMediaImage,
+          alt: 'movie media component for cinema app',
           bg: Macbook50
         }
       ],
